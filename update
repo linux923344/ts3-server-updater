@@ -23,14 +23,14 @@ fi
 
 if (alive_ts3=0)
 	then
-		#Tworzenie BACKUPU
+		#CREATE BACKUP
 		sudo mkdir -p /BACKUP/
 		cp -rp /opt/ /BACKUP/opt-$(date +"%d-%m-%Y")/
 
-		#POBIERANIE NAJNOWSZEJ WERSJI TS3
+		#DOWNLOAD NEWER VERSION OF TEAMSPEAK
 		wget $LINK --quiet
 
-		#ROZPAKOWANIE TS3 & SKOPIOWANIE PLIKOW
+		#UNTAR AND COPY FILES
 		tar -jxf teamspeak3-server_linux_amd*.tar.bz2 
 
 		cp -rp /opt/teamspeak3-server_linux_amd64/CHANGELOG $ts3local
@@ -43,7 +43,7 @@ if (alive_ts3=0)
 		cp -rp /opt/teamspeak3-server_linux_amd64/serverquerydocs $ts3local
 		cp -rp /opt/teamspeak3-server_linux_amd64/libts3_ssh.so $ts3local
 
-		#USUNIECIE BZDET
+		#REMOVE FILES
 		rm -rf teamspeak3-server_linux_amd*.tar.bz2 teamspeak3-server_linux_amd64* 
 
 		#START TEAMSPEAK
