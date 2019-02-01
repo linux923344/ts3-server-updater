@@ -1,4 +1,3 @@
-
 #TeamSpeak3 - Updater 
 
 I use teamspeak server as a service. If you want to have the same setting (i.e when you want stop your teamspeak server you can write:
