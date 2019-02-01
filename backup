@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo mkdir -p /BACKUP/
+cp -rp /opt/ /BACKUP/opt-$(date +"%d-%m-%Y")/ 

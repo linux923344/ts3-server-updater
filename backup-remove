@@ -1,0 +1,11 @@
+#!/bin/bash
+sudo mkdir -p /BACKUP/
+cp -rp /opt/ /BACKUP/opt-$(date +"%d-%m-%Y")/ 
+cd /BACKUP/
+touch /BACKUP/tmp /BACKUP/stay
+echo "$(ls -lut /BACKUP/ | sed -e '/total/d' | awk {'print $9'})"  > /BACKUP/tmp
+echo "$(ls -lut /BACKUP/ | sed -e '/total/d' | awk {'print $9'})" | tail -2 > /BACKUP/stay
+grep -vf /BACKUP/stay /BACKUP/tmp > /BACKUP/deleted
+sudo rm -rf $(cat /BACKUP/deleted)
+sudo rm -rf /BACKUP/tmp /BACKUP/stay /BACKUP/deleted
+
