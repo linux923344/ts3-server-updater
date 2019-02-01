@@ -1,4 +1,4 @@
-#TeamSpeak3 - Updater 
+# TeamSpeak3 - Updater 
 
 I use teamspeak server as a service. If you want to have the same setting (i.e when you want stop your teamspeak server you can write:
 ```
@@ -12,13 +12,13 @@ cd ts3-server-updater
 sudo cp teamspeak.service /usr/lib/systemd/system/
 sudo systemctl daemon-reload
 ```
-#Instalation teamspeak.service
+## Instalation teamspeak.service
 In the file **teamspeak.service** the default localization is **/opt/teamspeak/** and the default user is **teamspeak**. You can change it for your settings of course. Also in the when you have different localization you **MUST** change it in the ```update``` in the variable ``ts3local``.
 
 Now you have ```systemctl``` for stop or start your service.
  
 
-#Updating...
+## Updating...
 If you did not commit my repo, you should do it now.
 ```
 git clone https://github.com/linux923344/ts3-server-updater.git
