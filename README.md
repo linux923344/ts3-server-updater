@@ -42,6 +42,4 @@ The update will be do a backup. The file ``backup-remove`` and ``backup`` I use 
 
 ```
 
-If You wanna contact with me write to me on private message or yorunepl@xmpp.jp
-
-
+If You wanna contact with me write to me on private message or write to y0rune@aol.com
